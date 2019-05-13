@@ -12,6 +12,8 @@ RUN pip3 install lxml
 RUN pip3 install setuptools
 
 RUN git clone https://github.com/tzutalin/labelImg
+WORKDIR /labelImg
+RUN pyrcc5 resources.qrc -o resources.py
 
 RUN pip3 install resources requests staty
 
